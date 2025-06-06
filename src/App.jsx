@@ -73,6 +73,7 @@ const App = () => {
           const place = json.results[0];
           fetchWeather(place.latitude, place.longitude, place.name);
         }
+        setSearch("");
       });
   };
 
@@ -114,26 +115,28 @@ const App = () => {
   return (
     <>
       <div className="header">
-        
         <div className="unit-toggle-wrapper">
           <h1 className="city-name">{city}</h1>
-            <label className="unit-switch">
-              <span className="unit-label">°C</span>
-              <input
-                type="checkbox"
-                checked={currentUnit === "F"}
-                onChange={unitToggle}
-              />
-              <span className="slider" />
-              <span className="unit-label">°F</span>
-            </label>
-          </div>
+          <label className="unit-switch">
+            <span className="unit-label">°C</span>
+            <input
+              type="checkbox"
+              checked={currentUnit === "F"}
+              onChange={unitToggle}
+            />
+            <span className="slider" />
+            <span className="unit-label">°F</span>
+          </label>
+        </div>
         <div className="search-bar">
           <input
             type="text"
             value={search}
             placeholder="Search city..."
             onChange={(e) => setSearch(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") searchCity();
+            }}
           />
           <button onClick={searchCity}>Search</button>
         </div>
