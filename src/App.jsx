@@ -118,14 +118,14 @@ const App = () => {
         <div className="unit-toggle-wrapper">
           <h1 className="city-name">{city}</h1>
           <label className="unit-switch">
-            <span className="unit-label">°C</span>
+            <span className="unit-label">°F</span>
             <input
               type="checkbox"
               checked={currentUnit === "F"}
               onChange={unitToggle}
             />
             <span className="slider" />
-            <span className="unit-label">°F</span>
+            <span className="unit-label">°C</span>
           </label>
         </div>
         <div className="search-bar">
