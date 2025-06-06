@@ -33,7 +33,17 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   border: none;
-  background: #00bfff;
+  background: #2f53f5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-bar button.btn-unit-toggle {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #04781d;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -95,4 +105,55 @@ body {
 
 .hour-icon {
   font-size: 1.5rem;
+}
+
+.unit-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+}
+
+.unit-switch {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background: #039254;
+  border-radius: 30px;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+.unit-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.unit-switch .unit-label {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  z-index: 2;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.unit-switch .slider {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: 3px;
+  left: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.unit-switch input:checked + .slider {
+  transform: translateX(38px);
 }
