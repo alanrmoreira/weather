@@ -1,12 +1,61 @@
-# React + Vite
+# Weather Forecast Widget
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a 7-day weather forecast widget built using React and Vite. It displays daily weather information and allows users to switch between Celsius and Fahrenheit. It also includes a search feature to get weather data for different cities.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js (version 18 or later)
+- npm
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+
+```
+git clone https://github.com/alanrmoreira/weather.git
+cd weather
+```
+
+2. Install dependencies:
+
+```
+npm install
+```
+
+3. Start the development server:
+
+```
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+## Project Structure
+
+```
+weather/
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── WeatherCard.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Features
+
+- Displays a 7-day weather forecast
+- Switch between Celsius and Fahrenheit
+- Search for cities
+- Responsive layout
+
+## Data Source
+
+The weather data is provided by the [Open-Meteo API](https://open-meteo.com/).
+
+## License
+
+This project is for academic purposes only.
